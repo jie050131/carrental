@@ -27,9 +27,5 @@ public interface UserMapper extends JpaRepository<User, Integer> {
     public User findUserById(Integer id);
 
 
-    //查询全部用户
-    @Override
-    @Query(value = "select * from user where perm=0 ", nativeQuery = true)
-    public Page<User> findAll(Pageable pageAble);
 
 }
